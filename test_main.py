@@ -9,3 +9,10 @@ def test_hello():
 
     assert response.status_code == 200
     assert response.json() == {"message": "Hello, Darshan!"}
+
+def test_health():
+    with TestClient(app) as client:
+        response = client.get("/health")
+
+    assert response.status_code == 200
+    assert response.json() == {"status": "ok"}

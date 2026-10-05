@@ -6,3 +6,7 @@ app = FastAPI(title="GitHub Actions Demo")
 @app.get("/hello")
 def hello():
     return {"message": "Hello, Darshan!"}
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
