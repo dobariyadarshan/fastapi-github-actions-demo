@@ -5,4 +5,4 @@ app = FastAPI(title="GitHub Actions Demo")
 
 @app.get("/hello")
 def hello():
-    return {"message": "Hello, Darshan!"}
+    return {"message": "Hello, GitHub!"}
